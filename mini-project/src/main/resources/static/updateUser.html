@@ -1,0 +1,45 @@
+<div class="modal-header">
+	<h4 class="modal-title">Add User</h4>
+	<button type="button" class="close" data-dismiss="modal"
+		aria-hidden="true">&times;</button>
+</div>
+<div class="modal-body">
+	<div class="form-group">
+		<label>Name</label> <input type="text" ng-modal="email"
+			class="form-control" required ng-model="name">
+	</div>
+	<div class="form-group">
+		<label>Email</label> <input type="email" class="form-control" required
+			ng-model="email">
+	</div>
+	<div class="form-group">
+		<label>Password</label> <input type="password" class="form-control"
+			required ng-model="password">
+	</div>
+	<div class="form-group">
+		<label>Confirm Password</label> <input type="password"
+			class="form-control" required ng-model="conpass">
+	</div>
+	<div class="form-group">
+		<label>Language</label> <select class="form-control"
+			id="exampleFormControlSelect3" ng-model="language">
+			<option>Vietnamese</option>
+			<option>English</option>
+			<option>Japanese</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label>Role</label> <select class="form-control"
+			id="exampleFormControlSelect4" ng-model="role">
+			<option>Administrator</option>
+			<option>Operator</option>
+			<option>View Only</option>
+		</select>
+	</div>
+
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="Cancel()">Cancel</button>
+	<input type="submit" class="btn btn-success" ng-click="Update()"
+		ng-disabled="password != conpass" value="Update">
+</div>
